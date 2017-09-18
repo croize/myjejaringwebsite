@@ -1,0 +1,72 @@
+.lalala{
+	height: 639px;
+}
+
+#krit{
+	margin: 3px;
+}
+
+#dropbawah{
+	background-color: #68dff0;
+	color: white;
+	border-color: #48bcb4;
+}
+#lalaa{
+	border-color: #48bcb4;
+	background-color: #68dff0;
+	color: white;
+}
+#porm{
+}
+
+#sizegalery{
+	margin: 20px 0px;
+}
+
+#clrbtn1{
+	background-color: #5A738E;
+	color: #fff;
+}
+#clrbtn1:hover{
+	background-color:#fff;
+	color: #5A738E;
+}
+#clrbtn2{
+	color: #5A738E;
+	border-color: #5A738E;
+}
+#clrbtn2:hover{
+	background-color: #5A738E;;
+	color: #fff;
+}
+#gridgalery{
+
+}
+input #tombolfile{
+	color: red;
+ 	
+}
+#viewtampilan{
+	height: 330px;
+	color: white;
+}
+.batas{
+	margin: 0px 90px;
+	padding: 100px 150px 150px 150px ;
+}
+@media (max-width: 1000px) {
+  .batas {
+  	text-align: center;
+    padding: 10px;
+  }
+  #gridbtn{
+  	font-size: 9px;
+  }
+}
+.set-row{
+	padding: 10px;
+}
+#wawheader{
+	height: 100%;
+	width: 100%;
+}
