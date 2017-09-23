@@ -41,5 +41,5 @@ Route::get('access',function(){
   return view('rifqi');
 });
 Route::get('error',function(){
-  return view('rifqi');
+  return view('404');
 });

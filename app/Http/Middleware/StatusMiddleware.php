@@ -16,7 +16,7 @@ class StatusMiddleware
     public function handle($request, Closure $next, $status)
     {
       if (auth()->check() && !auth()->user()->status($status)) {
-        return redirect('admin');
+        return redirect('error');
       }
         return $next($request);
     }

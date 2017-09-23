@@ -34,4 +34,11 @@ class User extends Authenticatable
         return false;
       }
     }
+    public function status($status){
+      if ($this->status == $status) {
+        return true;
+      }else{
+        return false;
+      }
+    }
 }

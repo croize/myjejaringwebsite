@@ -28,13 +28,13 @@
                   </div>
                   <div class="col-sm-6 col-xs-6">
                   			<div class="form-group">
-                        	
+
                         	<div class="col-md-12 col-sm-12 col-xs-12">
                           	<input type="text" class="form-control" value="{{$in->link}}">
                         	</div>
                       		</div><form action="/myjejaring/social/{{$in->id}}" method="post">
                    </div>
-                   
+
                     <div class="col-sm-3 col-xs-3">
 <div class="col-xs-6">
                           <a type="submit" href="/myjejaring/social/{{$in->id}}/edit" class="btn btn-primary">Edit</a></div>

@@ -13,6 +13,13 @@ class UsermonitoringController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth');
+         $this->middleware('status:1');
+     }
+
     public function index()
     {
         $sh = User::all();
