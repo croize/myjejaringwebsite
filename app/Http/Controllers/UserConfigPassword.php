@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class UserConfigPassword extends Controller
 {
@@ -12,6 +13,13 @@ class UserConfigPassword extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth');
+         $this->middleware('access:1');
+     }
+
     public function index()
     {
         //
@@ -57,8 +65,16 @@ class UserConfigPassword extends Controller
      */
     public function edit($id)
     {
-      $as = User::find($id);
-      return view('operator.usereditpw')->with('pw', $as);
+      if (Auth::check()) {
+        if (Auth::user()->id == $id) {
+          $as = User::find($id);
+          return view('operator.usereditpw')->with('pw', $as);
+        }else {
+          return redirect('home');
+        }
+      }else{
+        return redirect('login');
+      }
     }
 
     /**

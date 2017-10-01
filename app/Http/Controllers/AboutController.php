@@ -13,6 +13,13 @@ class AboutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth');
+         $this->middleware('access:1');
+     }
+
     public function index()
     {
       $s = About::all();

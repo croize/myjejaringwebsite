@@ -13,6 +13,13 @@ class UserConfigProfil extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth');
+         $this->middleware('access:1');
+     }
+
     public function index()
     {
         //
@@ -58,8 +65,16 @@ class UserConfigProfil extends Controller
      */
     public function edit($id)
     {
-        $as = User::find($id);
-        return view('operator.usereditprofil')->with('profile', $as);
+      if (Auth::check()) {
+        if (Auth::user()->id == $id) {
+          $as = User::find($id);
+          return view('operator.usereditprofil')->with('profile', $as);
+        }else {
+          return redirect('home');
+        }
+      }else{
+        return redirect('login');
+      }
     }
 
     /**
